@@ -1,0 +1,2444 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E1DC2845-DA45-4B4C-B385-0A67E5C98978}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>wfaIntersem</RootNamespace>
+    <AssemblyName>Intersem</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>C:\Users\Developer Sr\Desktop\PUBLICACION INTERSEM\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <UpdateUrl>https://www.sdib.com.mx/desarrollo/intersem/</UpdateUrl>
+    <ProductName>Intersem</ProductName>
+    <PublisherName>SDIB</PublisherName>
+    <SuiteName>SDIB</SuiteName>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>72</ApplicationRevision>
+    <ApplicationVersion>1.0.3.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>8A1AAF190CA5394BE7B4ECA72D77CF78D99F522C</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>wfaBuffon_ClaveTemporal.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\vector.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="BCrypt.Net-Core, Version=1.6.0.0, Culture=neutral, PublicKeyToken=4d63bfbfdfd3c6e4, processorArchitecture=MSIL">
+      <HintPath>..\packages\BCrypt.Net-Core.1.6.0\lib\net452\BCrypt.Net-Core.dll</HintPath>
+    </Reference>
+    <Reference Include="cZebra">
+      <HintPath>..\cZebra.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.CodeParser.v21.2, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Dashboard.v21.2.Core, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Dashboard.v21.2.Win, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v21.2, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v21.2, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v21.2.UI, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Dialogs.v21.2.Core, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Images.v21.2, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Map.v21.2.Core, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v21.2.Core, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.PivotGrid.v21.2.Core, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v21.2.Core, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v21.2.Core, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v21.2.Core, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v21.2.Core, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.Desktop.v21.2, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.TreeMap.v21.2.Core, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v21.2.UI, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v21.2, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v21.2, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v21.2, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v21.2.Core, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v21.2, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v21.2.Extensions, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v21.2.UI, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v21.2.Wizard, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraDialogs.v21.2, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v21.2, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v21.2.Core, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v21.2.Presets, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v21.2.Win, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v21.2, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v21.2, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraMap.v21.2, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v21.2, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v21.2, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v21.2, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v21.2.Export, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v21.2, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v21.2.Extensions, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v21.2, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v21.2, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v21.2.Core.Desktop, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v21.2.Core, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v21.2.Reporting, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v21.2, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeMap.v21.2, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeMap.v21.2.UI, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v21.2, Version=21.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DocumentFormat.OpenXml, Version=2.13.0.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.13.0\lib\net40\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="FTP">
+      <HintPath>..\..\..\Users\Diseño PC\Desktop\FTP.dll</HintPath>
+    </Reference>
+    <Reference Include="InputKey">
+      <HintPath>..\InputKey.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\wfaPaqueteria\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio, Version=1.9.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NAudio.1.9.0\lib\net35\NAudio.dll</HintPath>
+    </Reference>
+    <Reference Include="NReco.ImageGenerator, Version=1.2.0.0, Culture=neutral, PublicKeyToken=0ef6c878974c90ac, processorArchitecture=MSIL">
+      <HintPath>..\packages\NReco.ImageGenerator.1.2.0\lib\net45\NReco.ImageGenerator.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Input.Manipulations" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationClient" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Configuracion\frmConfigImprecion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configuracion\frmConfigImprecion.Designer.cs">
+      <DependentUpon>frmConfigImprecion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmAsignacionFormatos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmAsignacionFormatos.Designer.cs">
+      <DependentUpon>frmAsignacionFormatos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmTiposUnidadP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmTiposUnidadP.designer.cs">
+      <DependentUpon>frmTiposUnidadP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmTiposUnidadD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmTiposUnidadD.designer.cs">
+      <DependentUpon>frmTiposUnidadD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmVehiculosD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmVehiculosD.Designer.cs">
+      <DependentUpon>frmVehiculosD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmVehiculosP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmVehiculosP.Designer.cs">
+      <DependentUpon>frmVehiculosP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmClientesD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmClientesD.designer.cs">
+      <DependentUpon>frmClientesD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmClientesP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmClientesP.designer.cs">
+      <DependentUpon>frmClientesP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmCategoriasP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmCategoriasP.Designer.cs">
+      <DependentUpon>frmCategoriasP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmCategoriasD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmCategoriasD.Designer.cs">
+      <DependentUpon>frmCategoriasD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmFirmasD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmFirmasD.designer.cs">
+      <DependentUpon>frmFirmasD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmFirmasP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmFirmasP.Designer.cs">
+      <DependentUpon>frmFirmasP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmPuestosD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmPuestosD.Designer.cs">
+      <DependentUpon>frmPuestosD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmPuestosP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmPuestosP.Designer.cs">
+      <DependentUpon>frmPuestosP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmEmpleadosD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmEmpleadosD.designer.cs">
+      <DependentUpon>frmEmpleadosD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmEmpleadosP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmEmpleadosP.Designer.cs">
+      <DependentUpon>frmEmpleadosP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmRutinasD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmRutinasD.Designer.cs">
+      <DependentUpon>frmRutinasD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmRutinasP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmRutinasP.Designer.cs">
+      <DependentUpon>frmRutinasP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmPasosD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmPasosD.Designer.cs">
+      <DependentUpon>frmPasosD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmPasosP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmPasosP.Designer.cs">
+      <DependentUpon>frmPasosP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmTipoClienteD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmTipoClienteD.Designer.cs">
+      <DependentUpon>frmTipoClienteD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmTipoClienteP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmTipoClienteP.Designer.cs">
+      <DependentUpon>frmTipoClienteP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmObservacionesD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmObservacionesD.designer.cs">
+      <DependentUpon>frmObservacionesD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmObservacionesP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmObservacionesP.designer.cs">
+      <DependentUpon>frmObservacionesP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmMunicipiosD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmMunicipiosD.Designer.cs">
+      <DependentUpon>frmMunicipiosD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmMunicipiosP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmMunicipiosP.Designer.cs">
+      <DependentUpon>frmMunicipiosP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmIncidenciasD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmIncidenciasD.designer.cs">
+      <DependentUpon>frmIncidenciasD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmIncidenciasP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmIncidenciasP.designer.cs">
+      <DependentUpon>frmIncidenciasP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmTiposIncidenciasD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmTiposIncidenciasD.Designer.cs">
+      <DependentUpon>frmTiposIncidenciasD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmTiposIncidenciasP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmTiposIncidenciasP.designer.cs">
+      <DependentUpon>frmTiposIncidenciasP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmSolucionesD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmSolucionesD.Designer.cs">
+      <DependentUpon>frmSolucionesD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmSolucionesP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmSolucionesP.Designer.cs">
+      <DependentUpon>frmSolucionesP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmEquiposP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmEquiposP.Designer.cs">
+      <DependentUpon>frmEquiposP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmEquiposD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmEquiposD.Designer.cs">
+      <DependentUpon>frmEquiposD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmModelosP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmModelosP.Designer.cs">
+      <DependentUpon>frmModelosP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmModelosD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmModelosD.Designer.cs">
+      <DependentUpon>frmModelosD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmMarcasD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmMarcasD.Designer.cs">
+      <DependentUpon>frmMarcasD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmColoresD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmColoresD.Designer.cs">
+      <DependentUpon>frmColoresD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmMarcasP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmMarcasP.Designer.cs">
+      <DependentUpon>frmMarcasP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmColoresP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmColoresP.Designer.cs">
+      <DependentUpon>frmColoresP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmMotivosD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmMotivosD.designer.cs">
+      <DependentUpon>frmMotivosD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmMotivosP .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmMotivosP .designer.cs">
+      <DependentUpon>frmMotivosP .cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmPerfilesD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmPerfilesD.designer.cs">
+      <DependentUpon>frmPerfilesD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmPerfilesP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmPerfilesP.designer.cs">
+      <DependentUpon>frmPerfilesP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Herramientas\frmAdminPerfilesD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Herramientas\frmAdminPerfilesD.designer.cs">
+      <DependentUpon>frmAdminPerfilesD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Herramientas\frmAdminPerfilesP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Herramientas\frmAdminPerfilesP.designer.cs">
+      <DependentUpon>frmAdminPerfilesP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Herramientas\frmAdminUsuariosD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Herramientas\frmAdminUsuariosD.designer.cs">
+      <DependentUpon>frmAdminUsuariosD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Herramientas\frmAdminUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Herramientas\frmAdminUsuarios.designer.cs">
+      <DependentUpon>frmAdminUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Importaciones\frmImportacionesAnexosJurisdiccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Importaciones\frmImportacionesAnexosJurisdiccion.designer.cs">
+      <DependentUpon>frmImportacionesAnexosJurisdiccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Importaciones\frmImportacionRutinas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Importaciones\frmImportacionRutinas.designer.cs">
+      <DependentUpon>frmImportacionRutinas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Importaciones\frmImportacionAnexos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Importaciones\frmImportacionAnexos.designer.cs">
+      <DependentUpon>frmImportacionAnexos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Importaciones\RegistroPasos.cs" />
+    <Compile Include="Formularios\Importaciones\RutinaPasos.cs" />
+    <Compile Include="Formularios\Procesos\Anexos\frmAnexosSinValidar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Procesos\Anexos\frmAnexosSinValidar.Designer.cs">
+      <DependentUpon>frmAnexosSinValidar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Procesos\Anexos\frmFormatoAnexo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Procesos\Anexos\frmFormatoAnexo.Designer.cs">
+      <DependentUpon>frmFormatoAnexo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Procesos\Cierre de Servicios\frmCierreServiciosP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Procesos\Cierre de Servicios\frmCierreServiciosP.Designer.cs">
+      <DependentUpon>frmCierreServiciosP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Procesos\Cotizaciones\frmArchivosAuxiliares.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Procesos\Cotizaciones\frmArchivosAuxiliares.Designer.cs">
+      <DependentUpon>frmArchivosAuxiliares.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Procesos\Cotizaciones\frmRelacionCotizaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Procesos\Cotizaciones\frmRelacionCotizaciones.Designer.cs">
+      <DependentUpon>frmRelacionCotizaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Procesos\Cuentas por cobrar\frmCuentasPorPagarD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Procesos\Cuentas por cobrar\frmCuentasPorPagarD.designer.cs">
+      <DependentUpon>frmCuentasPorPagarD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Procesos\Cuentas por cobrar\frmCuentasPorPagarP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Procesos\Cuentas por cobrar\frmCuentasPorPagarP.Designer.cs">
+      <DependentUpon>frmCuentasPorPagarP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Procesos\Cotizaciones\frmFtp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Procesos\Cotizaciones\frmFtp.Designer.cs">
+      <DependentUpon>frmFtp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Procesos\Anexos\frmAnexosP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Procesos\Anexos\frmAnexosP.Designer.cs">
+      <DependentUpon>frmAnexosP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Procesos\Cuentas por cobrar\frmFacturasD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Procesos\Cuentas por cobrar\frmFacturasD.Designer.cs">
+      <DependentUpon>frmFacturasD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Procesos\Minutas\frmMinutasD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Procesos\Minutas\frmMinutasD.Designer.cs">
+      <DependentUpon>frmMinutasD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Procesos\Minutas\frmMinutasP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Procesos\Minutas\frmMinutasP.Designer.cs">
+      <DependentUpon>frmMinutasP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Procesos\Reportes\frmReportesEmpleadoP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Procesos\Reportes\frmReportesEmpleadoP.Designer.cs">
+      <DependentUpon>frmReportesEmpleadoP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Procesos\Servicios\frmCalendarioAsignacionServicios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Procesos\Servicios\frmCalendarioAsignacionServicios.Designer.cs">
+      <DependentUpon>frmCalendarioAsignacionServicios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Procesos\Servicios\frmCambiarEstatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Procesos\Servicios\frmCambiarEstatus.Designer.cs">
+      <DependentUpon>frmCambiarEstatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Procesos\Servicios\frmFinalizarServicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Procesos\Servicios\frmFinalizarServicio.Designer.cs">
+      <DependentUpon>frmFinalizarServicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Procesos\Servicios\frmCambiarFormato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Procesos\Servicios\frmCambiarFormato.Designer.cs">
+      <DependentUpon>frmCambiarFormato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Procesos\Servicios\frmNotas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Procesos\Servicios\frmNotas.Designer.cs">
+      <DependentUpon>frmNotas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Procesos\Servicios\frmServiciosD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Procesos\Servicios\frmServiciosD.designer.cs">
+      <DependentUpon>frmServiciosD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Procesos\Cotizaciones\frmCotizacionesD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Procesos\Cotizaciones\frmCotizacionesD.designer.cs">
+      <DependentUpon>frmCotizacionesD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Procesos\Servicios\frmServiciosFiltrado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Procesos\Servicios\frmServiciosFiltrado.Designer.cs">
+      <DependentUpon>frmServiciosFiltrado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Procesos\Servicios\frmServiciosP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Procesos\Servicios\frmServiciosP.Designer.cs">
+      <DependentUpon>frmServiciosP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Procesos\Cotizaciones\frmCotizacionesP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Procesos\Cotizaciones\frmCotizacionesP.Designer.cs">
+      <DependentUpon>frmCotizacionesP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Procesos\Servicios\frmAsignacionServicios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Procesos\Servicios\frmAsignacionServicios.Designer.cs">
+      <DependentUpon>frmAsignacionServicios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Procesos\Cotizaciones\frmSolicitudServicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Procesos\Cotizaciones\frmSolicitudServicio.Designer.cs">
+      <DependentUpon>frmSolicitudServicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Procesos\WaitForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Procesos\WaitForm1.designer.cs">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Anexos\plantillaServiciosGanadores.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Anexos\plantillaServiciosGanadores.Designer.cs">
+      <DependentUpon>plantillaServiciosGanadores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Catalogos\plantillaRutina.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Catalogos\plantillaRutina.Designer.cs">
+      <DependentUpon>plantillaRutina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Catalogos\plantillaEmpleado.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Catalogos\plantillaEmpleado.Designer.cs">
+      <DependentUpon>plantillaEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Cierre de servicios\frmFormatoCierre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Cierre de servicios\frmFormatoCierre.Designer.cs">
+      <DependentUpon>frmFormatoCierre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Cierre de servicios\plantillaObservacionesFinalizado.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Cierre de servicios\plantillaObservacionesFinalizado.Designer.cs">
+      <DependentUpon>plantillaObservacionesFinalizado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Cierre de servicios\plantillaReporteGeneral.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Cierre de servicios\plantillaReporteGeneral.Designer.cs">
+      <DependentUpon>plantillaReporteGeneral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Cierre de servicios\plantillaReporteInternoINT.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Cierre de servicios\plantillaReporteInternoINT.Designer.cs">
+      <DependentUpon>plantillaReporteInternoINT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Cierre de servicios\plantillaActaEntregaRecepcion.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Cierre de servicios\plantillaActaEntregaRecepcion.Designer.cs">
+      <DependentUpon>plantillaActaEntregaRecepcion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Cotizaciones\frmFormato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Cotizaciones\frmFormato.Designer.cs">
+      <DependentUpon>frmFormato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Cotizaciones\PlantillaIntTecnica.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Cotizaciones\PlantillaIntTecnica.Designer.cs">
+      <DependentUpon>PlantillaIntTecnica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Cotizaciones\plantillaTec2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Cotizaciones\plantillaTec2.Designer.cs">
+      <DependentUpon>plantillaTec2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Cotizaciones\plantillaRet2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Cotizaciones\plantillaRet2.Designer.cs">
+      <DependentUpon>plantillaRet2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Cotizaciones\plantillaInt2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Cotizaciones\plantillaInt2.Designer.cs">
+      <DependentUpon>plantillaInt2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Cotizaciones\plantillaRet.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Cotizaciones\plantillaRet.Designer.cs">
+      <DependentUpon>plantillaRet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Cotizaciones\plantillaTec.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Cotizaciones\plantillaTec.Designer.cs">
+      <DependentUpon>plantillaTec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Cotizaciones\plantillaIntEconomica.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Cotizaciones\plantillaIntEconomica.Designer.cs">
+      <DependentUpon>plantillaIntEconomica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Cotizaciones\plantillaTecnicaTec.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Cotizaciones\plantillaTecnicaTec.Designer.cs">
+      <DependentUpon>plantillaTecnicaTec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Cotizaciones\plantillaTecnicaTec2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Cotizaciones\plantillaTecnicaTec2.Designer.cs">
+      <DependentUpon>plantillaTecnicaTec2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\CuentasPorCobrar\plantillaCxC.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\CuentasPorCobrar\plantillaCxC.Designer.cs">
+      <DependentUpon>plantillaCxC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Minutas\plantillaMinuta.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Minutas\plantillaMinuta.Designer.cs">
+      <DependentUpon>plantillaMinuta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Minutas\sptTemas.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Minutas\sptTemas.Designer.cs">
+      <DependentUpon>sptTemas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Minutas\sptAcuerdos.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Minutas\sptAcuerdos.Designer.cs">
+      <DependentUpon>sptAcuerdos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Rutinas\INT\plantillaIntRut1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Rutinas\INT\plantillaIntRut1.designer.cs">
+      <DependentUpon>plantillaIntRut1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Rutinas\INT\plantillaIntRut2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Rutinas\INT\plantillaIntRut2.designer.cs">
+      <DependentUpon>plantillaIntRut2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Rutinas\RET\plantillaRetRut1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Rutinas\RET\plantillaRetRut1.designer.cs">
+      <DependentUpon>plantillaRetRut1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Rutinas\RET\plantillaRetRut3.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Rutinas\RET\plantillaRetRut3.designer.cs">
+      <DependentUpon>plantillaRetRut3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Rutinas\RET\plantillaRetRut2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Rutinas\RET\plantillaRetRut2.designer.cs">
+      <DependentUpon>plantillaRetRut2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Rutinas\TEC\plantillaCorrectivoTec.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Rutinas\TEC\plantillaCorrectivoTec.Designer.cs">
+      <DependentUpon>plantillaCorrectivoTec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Rutinas\TEC\plantillaPreventivoTect.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Rutinas\TEC\plantillaPreventivoTect.Designer.cs">
+      <DependentUpon>plantillaPreventivoTect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Rutinas\TEC\plantillaTecRut2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Rutinas\TEC\plantillaTecRut2.designer.cs">
+      <DependentUpon>plantillaTecRut2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Rutinas\TEC\plantillaTecRut3.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Rutinas\TEC\plantillaTecRut3.designer.cs">
+      <DependentUpon>plantillaTecRut3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Rutinas\TEC\plantillaTecRut1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Rutinas\TEC\plantillaTecRut1.designer.cs">
+      <DependentUpon>plantillaTecRut1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Servicios\frmFormatoServiciosTec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Servicios\frmFormatoServiciosTec.Designer.cs">
+      <DependentUpon>frmFormatoServiciosTec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Servicios\frmFormatoServicios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Servicios\frmFormatoServicios.Designer.cs">
+      <DependentUpon>frmFormatoServicios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Servicios\Bitacora\plantillaBitacora.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Servicios\Bitacora\plantillaBitacora.Designer.cs">
+      <DependentUpon>plantillaBitacora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Servicios\Orden de servicio\plantillaOrdenServicioTec.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Servicios\Orden de servicio\plantillaOrdenServicioTec.Designer.cs">
+      <DependentUpon>plantillaOrdenServicioTec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Servicios\Pruebas\.Designer - Copia %282%29.cs">
+      <DependentUpon>plantillaMSVTEC.cs</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Servicios\Pruebas\.Designer - Copia - Copia.cs">
+      <DependentUpon>plantillaDESFITEC.cs</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Servicios\Pruebas\.Designer - Copia.cs">
+      <DependentUpon>plantillaDESFI.cs</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Servicios\Pruebas\plantillaDESFIEX.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Servicios\Pruebas\plantillaDESFIEX.Designer.cs">
+      <DependentUpon>plantillaDESFIEX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Servicios\Pruebas\plantillaDESFITEC.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Servicios\Pruebas\plantillaECGTEC.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Servicios\Pruebas\plantillaECGTEC.Designer.cs">
+      <DependentUpon>plantillaECGTEC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Servicios\Pruebas\plantillaMSVTEC.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Servicios\Seguridad electrica\plantilla220V.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Servicios\Seguridad electrica\plantilla220V.Designer.cs">
+      <DependentUpon>plantilla220V.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Servicios\Seguridad electrica\plantillaRSETEC.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Servicios\Seguridad electrica\plantillaRSETEC.Designer.cs">
+      <DependentUpon>plantillaRSETEC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Servicios\Seguridad electrica\plantillaPSE2TEC.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Servicios\Seguridad electrica\plantillaPSE2TEC.Designer.cs">
+      <DependentUpon>plantillaPSE2TEC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Servicios\Seguridad electrica\plantillaTECPSE.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Servicios\Seguridad electrica\plantillaTECPSE.Designer.cs">
+      <DependentUpon>plantillaTECPSE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Servicios\Toma de datos\plantillaDesfibrilador.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Servicios\Toma de datos\plantillaDesfibrilador.Designer.cs">
+      <DependentUpon>plantillaDesfibrilador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Servicios\Pruebas\plantillaDESFI.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Servicios\Pruebas\plantillaECG.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Servicios\Pruebas\plantillaECG.Designer.cs">
+      <DependentUpon>plantillaECG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Servicios\Pruebas\plantillaMSV.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Servicios\Pruebas\.Designer.cs">
+      <DependentUpon>plantillaMSV.cs</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Servicios\Seguridad electrica\plantillaRSE.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Servicios\Seguridad electrica\plantillaRSE.Designer.cs">
+      <DependentUpon>plantillaRSE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Servicios\Seguridad electrica\plantillaRSEESA.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Servicios\Seguridad electrica\plantillaRSEESA.Designer.cs">
+      <DependentUpon>plantillaRSEESA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Servicios\Seguridad electrica\plantillaRSEESA62353.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Servicios\Seguridad electrica\plantillaRSEESA62353.Designer.cs">
+      <DependentUpon>plantillaRSEESA62353.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Servicios\Toma de datos\plantillaIncubadoras.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Servicios\Toma de datos\plantillaIncubadoras.Designer.cs">
+      <DependentUpon>plantillaIncubadoras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Servicios\Orden de servicio\plantillaOrdenServicioCorrectivo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Servicios\Orden de servicio\plantillaOrdenServicioCorrectivo.Designer.cs">
+      <DependentUpon>plantillaOrdenServicioCorrectivo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Servicios\Orden de servicio\plantillaOrdenServicioPreventivo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Servicios\Orden de servicio\plantillaOrdenServicioPreventivo.Designer.cs">
+      <DependentUpon>plantillaOrdenServicioPreventivo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Servicios\Correctivo\plantillaCorrectivo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Servicios\Correctivo\plantillaCorrectivo.Designer.cs">
+      <DependentUpon>plantillaCorrectivo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Servicios\Toma de datos\plantillaOrdenServicioPrueba.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Servicios\Toma de datos\plantillaOrdenServicioPrueba.Designer.cs">
+      <DependentUpon>plantillaOrdenServicioPrueba.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Solicitudes\platillaSolicitud.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\Solicitudes\platillaSolicitud.Designer.cs">
+      <DependentUpon>platillaSolicitud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConfiguracionServer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConfiguracionServer.Designer.cs">
+      <DependentUpon>frmConfiguracionServer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmImprimir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmImprimir.Designer.cs">
+      <DependentUpon>frmImprimir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLoginP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLoginP.Designer.cs">
+      <DependentUpon>frmLoginP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipal.Designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmUsuariosP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmUsuariosP.Designer.cs">
+      <DependentUpon>frmUsuariosP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmUsuariosD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Catalogos\frmUsuariosD.Designer.cs">
+      <DependentUpon>frmUsuariosD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulo.cs" />
+    <Compile Include="Modulos\Alerta.cs" />
+    <Compile Include="Modulos\FTP.cs" />
+    <Compile Include="Objetos.cs" />
+    <Compile Include="PrintRibbonControllerResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrintRibbonControllerResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\BANXICO\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="XRDesignRibbonControllerResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>XRDesignRibbonControllerResources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Configuracion\frmConfigImprecion.resx">
+      <DependentUpon>frmConfigImprecion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Catalogos\frmAsignacionFormatos.resx">
+      <DependentUpon>frmAsignacionFormatos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Catalogos\frmTiposUnidadP.resx">
+      <DependentUpon>frmTiposUnidadP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Catalogos\frmTiposUnidadD.resx">
+      <DependentUpon>frmTiposUnidadD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Catalogos\frmVehiculosD.resx">
+      <DependentUpon>frmVehiculosD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Catalogos\frmVehiculosP.resx">
+      <DependentUpon>frmVehiculosP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Catalogos\frmClientesD.resx">
+      <DependentUpon>frmClientesD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Catalogos\frmClientesP.resx">
+      <DependentUpon>frmClientesP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Catalogos\frmCategoriasP.resx">
+      <DependentUpon>frmCategoriasP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Catalogos\frmCategoriasD.resx">
+      <DependentUpon>frmCategoriasD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Catalogos\frmFirmasD.resx">
+      <DependentUpon>frmFirmasD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Catalogos\frmFirmasP.resx">
+      <DependentUpon>frmFirmasP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Catalogos\frmPuestosD.resx">
+      <DependentUpon>frmPuestosD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Catalogos\frmPuestosP.resx">
+      <DependentUpon>frmPuestosP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Catalogos\frmEmpleadosD.resx">
+      <DependentUpon>frmEmpleadosD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Catalogos\frmEmpleadosP.resx">
+      <DependentUpon>frmEmpleadosP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Catalogos\frmRutinasD.resx">
+      <DependentUpon>frmRutinasD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Catalogos\frmRutinasP.resx">
+      <DependentUpon>frmRutinasP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Catalogos\frmPasosD.resx">
+      <DependentUpon>frmPasosD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Catalogos\frmPasosP.resx">
+      <DependentUpon>frmPasosP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Catalogos\frmTipoClienteD.resx">
+      <DependentUpon>frmTipoClienteD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Catalogos\frmTipoClienteP.resx">
+      <DependentUpon>frmTipoClienteP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Catalogos\frmObservacionesD.resx">
+      <DependentUpon>frmObservacionesD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Catalogos\frmObservacionesP.resx">
+      <DependentUpon>frmObservacionesP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Catalogos\frmMunicipiosD.resx">
+      <DependentUpon>frmMunicipiosD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Catalogos\frmMunicipiosP.resx">
+      <DependentUpon>frmMunicipiosP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Catalogos\frmIncidenciasD.resx">
+      <DependentUpon>frmIncidenciasD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Catalogos\frmIncidenciasP.resx">
+      <DependentUpon>frmIncidenciasP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Catalogos\frmTiposIncidenciasD.resx">
+      <DependentUpon>frmTiposIncidenciasD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Catalogos\frmTiposIncidenciasP.resx">
+      <DependentUpon>frmTiposIncidenciasP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Catalogos\frmSolucionesD.resx">
+      <DependentUpon>frmSolucionesD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Catalogos\frmSolucionesP.resx">
+      <DependentUpon>frmSolucionesP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Catalogos\frmEquiposP.resx">
+      <DependentUpon>frmEquiposP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Catalogos\frmEquiposD.resx">
+      <DependentUpon>frmEquiposD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Catalogos\frmModelosP.resx">
+      <DependentUpon>frmModelosP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Catalogos\frmModelosD.resx">
+      <DependentUpon>frmModelosD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Catalogos\frmMarcasD.resx">
+      <DependentUpon>frmMarcasD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Catalogos\frmColoresD.resx">
+      <DependentUpon>frmColoresD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Catalogos\frmMarcasP.resx">
+      <DependentUpon>frmMarcasP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Catalogos\frmColoresP.resx">
+      <DependentUpon>frmColoresP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Catalogos\frmMotivosD.resx">
+      <DependentUpon>frmMotivosD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Catalogos\frmMotivosP .resx">
+      <DependentUpon>frmMotivosP .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Catalogos\frmPerfilesD.resx">
+      <DependentUpon>frmPerfilesD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Catalogos\frmPerfilesP.resx">
+      <DependentUpon>frmPerfilesP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Herramientas\frmAdminPerfilesD.resx">
+      <DependentUpon>frmAdminPerfilesD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Herramientas\frmAdminPerfilesP.resx">
+      <DependentUpon>frmAdminPerfilesP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Herramientas\frmAdminUsuariosD.resx">
+      <DependentUpon>frmAdminUsuariosD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Herramientas\frmAdminUsuarios.resx">
+      <DependentUpon>frmAdminUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Importaciones\frmImportacionesAnexosJurisdiccion.resx">
+      <DependentUpon>frmImportacionesAnexosJurisdiccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Importaciones\frmImportacionRutinas.resx">
+      <DependentUpon>frmImportacionRutinas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Importaciones\frmImportacionAnexos.resx">
+      <DependentUpon>frmImportacionAnexos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Procesos\Anexos\frmAnexosSinValidar.resx">
+      <DependentUpon>frmAnexosSinValidar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Procesos\Anexos\frmFormatoAnexo.resx">
+      <DependentUpon>frmFormatoAnexo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Procesos\Cierre de Servicios\frmCierreServiciosP.resx">
+      <DependentUpon>frmCierreServiciosP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Procesos\Cotizaciones\frmArchivosAuxiliares.resx">
+      <DependentUpon>frmArchivosAuxiliares.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Procesos\Cotizaciones\frmRelacionCotizaciones.resx">
+      <DependentUpon>frmRelacionCotizaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Procesos\Cuentas por cobrar\frmCuentasPorPagarD.resx">
+      <DependentUpon>frmCuentasPorPagarD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Procesos\Cuentas por cobrar\frmCuentasPorPagarP.resx">
+      <DependentUpon>frmCuentasPorPagarP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Procesos\Cotizaciones\frmFtp.resx">
+      <DependentUpon>frmFtp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Procesos\Anexos\frmAnexosP.resx">
+      <DependentUpon>frmAnexosP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Procesos\Cuentas por cobrar\frmFacturasD.resx">
+      <DependentUpon>frmFacturasD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Procesos\Minutas\frmMinutasD.resx">
+      <DependentUpon>frmMinutasD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Procesos\Minutas\frmMinutasP.resx">
+      <DependentUpon>frmMinutasP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Procesos\Reportes\frmReportesEmpleadoP.resx">
+      <DependentUpon>frmReportesEmpleadoP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Procesos\Servicios\frmCalendarioAsignacionServicios.resx">
+      <DependentUpon>frmCalendarioAsignacionServicios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Procesos\Servicios\frmCambiarEstatus.resx">
+      <DependentUpon>frmCambiarEstatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Procesos\Servicios\frmFinalizarServicio.resx">
+      <DependentUpon>frmFinalizarServicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Procesos\Servicios\frmCambiarFormato.resx">
+      <DependentUpon>frmCambiarFormato.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Procesos\Servicios\frmNotas.resx">
+      <DependentUpon>frmNotas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Procesos\Servicios\frmServiciosD.resx">
+      <DependentUpon>frmServiciosD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Procesos\Cotizaciones\frmCotizacionesD.resx">
+      <DependentUpon>frmCotizacionesD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Procesos\Servicios\frmServiciosFiltrado.resx">
+      <DependentUpon>frmServiciosFiltrado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Procesos\Servicios\frmServiciosP.resx">
+      <DependentUpon>frmServiciosP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Procesos\Cotizaciones\frmCotizacionesP.resx">
+      <DependentUpon>frmCotizacionesP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Procesos\Servicios\frmAsignacionServicios.resx">
+      <DependentUpon>frmAsignacionServicios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Procesos\Cotizaciones\frmSolicitudServicio.resx">
+      <DependentUpon>frmSolicitudServicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Procesos\WaitForm1.resx">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\Anexos\plantillaServiciosGanadores.resx">
+      <DependentUpon>plantillaServiciosGanadores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\Catalogos\plantillaRutina.resx">
+      <DependentUpon>plantillaRutina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\Catalogos\plantillaEmpleado.resx">
+      <DependentUpon>plantillaEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\Cierre de servicios\frmFormatoCierre.resx">
+      <DependentUpon>frmFormatoCierre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\Cierre de servicios\plantillaObservacionesFinalizado.resx">
+      <DependentUpon>plantillaObservacionesFinalizado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\Cierre de servicios\plantillaReporteGeneral.resx">
+      <DependentUpon>plantillaReporteGeneral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\Cierre de servicios\plantillaReporteInternoINT.resx">
+      <DependentUpon>plantillaReporteInternoINT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\Cierre de servicios\plantillaActaEntregaRecepcion.resx">
+      <DependentUpon>plantillaActaEntregaRecepcion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\Cotizaciones\frmFormato.resx">
+      <DependentUpon>frmFormato.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\Cotizaciones\PlantillaIntTecnica.resx">
+      <DependentUpon>PlantillaIntTecnica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\Cotizaciones\plantillaTec2.resx">
+      <DependentUpon>plantillaTec2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\Cotizaciones\plantillaRet2.resx">
+      <DependentUpon>plantillaRet2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\Cotizaciones\plantillaInt2.resx">
+      <DependentUpon>plantillaInt2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\Cotizaciones\plantillaRet.resx">
+      <DependentUpon>plantillaRet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\Cotizaciones\plantillaTec.resx">
+      <DependentUpon>plantillaTec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\Cotizaciones\plantillaIntEconomica.resx">
+      <DependentUpon>plantillaIntEconomica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\Cotizaciones\plantillaTecnicaTec.resx">
+      <DependentUpon>plantillaTecnicaTec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\Cotizaciones\plantillaTecnicaTec2.resx">
+      <DependentUpon>plantillaTecnicaTec2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\CuentasPorCobrar\plantillaCxC.resx">
+      <DependentUpon>plantillaCxC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\Minutas\plantillaMinuta.resx">
+      <DependentUpon>plantillaMinuta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\Minutas\sptTemas.resx">
+      <DependentUpon>sptTemas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\Minutas\sptAcuerdos.resx">
+      <DependentUpon>sptAcuerdos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\Rutinas\INT\plantillaIntRut1.resx">
+      <DependentUpon>plantillaIntRut1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\Rutinas\INT\plantillaIntRut2.resx">
+      <DependentUpon>plantillaIntRut2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\Rutinas\RET\plantillaRetRut1.resx">
+      <DependentUpon>plantillaRetRut1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\Rutinas\RET\plantillaRetRut3.resx">
+      <DependentUpon>plantillaRetRut3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\Rutinas\RET\plantillaRetRut2.resx">
+      <DependentUpon>plantillaRetRut2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\Rutinas\TEC\plantillaCorrectivoTec.resx">
+      <DependentUpon>plantillaCorrectivoTec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\Rutinas\TEC\plantillaPreventivoTect.resx">
+      <DependentUpon>plantillaPreventivoTect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\Rutinas\TEC\plantillaTecRut2.resx">
+      <DependentUpon>plantillaTecRut2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\Rutinas\TEC\plantillaTecRut3.resx">
+      <DependentUpon>plantillaTecRut3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\Rutinas\TEC\plantillaTecRut1.resx">
+      <DependentUpon>plantillaTecRut1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\Servicios\frmFormatoServiciosTec.resx">
+      <DependentUpon>frmFormatoServiciosTec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\Servicios\frmFormatoServicios.resx">
+      <DependentUpon>frmFormatoServicios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\Servicios\Bitacora\plantillaBitacora.resx">
+      <DependentUpon>plantillaBitacora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\Servicios\Orden de servicio\plantillaOrdenServicioTec.resx">
+      <DependentUpon>plantillaOrdenServicioTec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\Servicios\Pruebas\plantillaDESFIEX.resx">
+      <DependentUpon>plantillaDESFIEX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\Servicios\Pruebas\plantillaDESFITEC.resx">
+      <DependentUpon>plantillaDESFITEC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\Servicios\Pruebas\plantillaDESFI.resx">
+      <DependentUpon>plantillaDESFI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\Servicios\Pruebas\plantillaECGTEC.resx">
+      <DependentUpon>plantillaECGTEC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\Servicios\Pruebas\plantillaMSVTEC.resx">
+      <DependentUpon>plantillaMSVTEC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\Servicios\Seguridad electrica\plantilla220V.resx">
+      <DependentUpon>plantilla220V.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\Servicios\Seguridad electrica\plantillaRSETEC.resx">
+      <DependentUpon>plantillaRSETEC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\Servicios\Seguridad electrica\plantillaPSE2TEC.resx">
+      <DependentUpon>plantillaPSE2TEC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\Servicios\Seguridad electrica\plantillaTECPSE.resx">
+      <DependentUpon>plantillaTECPSE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\Servicios\Toma de datos\plantillaDesfibrilador.resx">
+      <DependentUpon>plantillaDesfibrilador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\Servicios\Pruebas\plantillaECG.resx">
+      <DependentUpon>plantillaECG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\Servicios\Pruebas\plantillaMSV.resx">
+      <DependentUpon>plantillaMSV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\Servicios\Seguridad electrica\plantillaRSE.resx">
+      <DependentUpon>plantillaRSE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\Servicios\Seguridad electrica\plantillaRSEESA.resx">
+      <DependentUpon>plantillaRSEESA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\Servicios\Seguridad electrica\plantillaRSEESA62353.resx">
+      <DependentUpon>plantillaRSEESA62353.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\Servicios\Toma de datos\plantillaIncubadoras.resx">
+      <DependentUpon>plantillaIncubadoras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\Servicios\Orden de servicio\plantillaOrdenServicioCorrectivo.resx">
+      <DependentUpon>plantillaOrdenServicioCorrectivo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\Servicios\Orden de servicio\plantillaOrdenServicioPreventivo.resx">
+      <DependentUpon>plantillaOrdenServicioPreventivo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\Servicios\Correctivo\plantillaCorrectivo.resx">
+      <DependentUpon>plantillaCorrectivo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\Servicios\Toma de datos\plantillaOrdenServicioPrueba.resx">
+      <DependentUpon>plantillaOrdenServicioPrueba.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\Solicitudes\platillaSolicitud.resx">
+      <DependentUpon>platillaSolicitud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConfiguracionServer.resx">
+      <DependentUpon>frmConfiguracionServer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmImprimir.resx">
+      <DependentUpon>frmImprimir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoginP.resx">
+      <DependentUpon>frmLoginP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Catalogos\frmUsuariosP.resx">
+      <DependentUpon>frmUsuariosP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Catalogos\frmUsuariosD.resx">
+      <DependentUpon>frmUsuariosD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintRibbonControllerResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>PrintRibbonControllerResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XRDesignRibbonControllerResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XRDesignRibbonControllerResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Abadi MT W04 Cond Bold.ttf" />
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Web References\BANXICO\DgieWS.wsdl" />
+    <None Include="Web References\BANXICO\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="wfaBuffon_ClaveTemporal.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addfile_20x20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_20x20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_20x20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_20x20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BE\BE.csproj">
+      <Project>{86a49d51-beac-430a-b630-c08a4487c7df}</Project>
+      <Name>BE</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BP\BP.csproj">
+      <Project>{57a01764-b541-4bfd-a0a3-55112d193440}</Project>
+      <Name>BP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\cPersistencia\Persistencia.csproj">
+      <Project>{a18d31ea-e12f-42e3-831e-9f991526284f}</Project>
+      <Name>Persistencia</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="de\DevExpress.Data.v21.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.DataAccess.v21.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.DataAccess.v21.2.UI.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.Office.v21.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.PivotGrid.v21.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.Printing.v21.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.RichEdit.v21.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.Sparkline.v21.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.Utils.v21.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.Utils.v21.2.UI.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.Xpo.v21.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraBars.v21.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraCharts.v21.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraCharts.v21.2.Wizard.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraEditors.v21.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraGauges.v21.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraGrid.v21.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraLayout.v21.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraNavBar.v21.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraPivotGrid.v21.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraPrinting.v21.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraReports.v21.2.Extensions.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraReports.v21.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraRichEdit.v21.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraTreeList.v21.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraVerticalGrid.v21.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.Data.v21.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.DataAccess.v21.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.DataAccess.v21.2.UI.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.Office.v21.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.PivotGrid.v21.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.Printing.v21.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.RichEdit.v21.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.Sparkline.v21.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.Utils.v21.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.Utils.v21.2.UI.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.Xpo.v21.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.XtraBars.v21.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.XtraCharts.v21.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.XtraCharts.v21.2.Wizard.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.XtraEditors.v21.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.XtraGauges.v21.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.XtraGrid.v21.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.XtraLayout.v21.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.XtraNavBar.v21.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.XtraPivotGrid.v21.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.XtraPrinting.v21.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.XtraReports.v21.2.Extensions.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.XtraReports.v21.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.XtraRichEdit.v21.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.XtraTreeList.v21.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.XtraVerticalGrid.v21.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.Data.v21.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.DataAccess.v21.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.DataAccess.v21.2.UI.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.Office.v21.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.PivotGrid.v21.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.Printing.v21.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.RichEdit.v21.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.Sparkline.v21.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.Utils.v21.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.Utils.v21.2.UI.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.Xpo.v21.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.XtraBars.v21.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.XtraCharts.v21.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.XtraCharts.v21.2.Wizard.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.XtraEditors.v21.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.XtraGauges.v21.2.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.XtraGrid.v21.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.XtraLayout.v21.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.XtraNavBar.v21.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.XtraPivotGrid.v21.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.XtraPrinting.v21.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.XtraReports.v21.2.Extensions.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.XtraReports.v21.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.XtraRichEdit.v21.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.XtraTreeList.v21.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.XtraVerticalGrid.v21.2.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\export_20x20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print_20x20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="high.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\logo TEC 2021_50.png" />
+    <None Include="Resources\logo TEC 2021_80.png" />
+    <None Include="Resources\logo TEC 2021.png" />
+    <None Include="Resources\Plantilla Fondo INTERSEM.png" />
+    <None Include="Resources\vector.png" />
+    <None Include="Resources\vector.ico" />
+    <None Include="Resources\I.png" />
+    <None Include="Resources\open2_32x32.png" />
+    <None Include="Resources\open2_16x16.png" />
+    <None Include="Resources\mail_32x32.png" />
+    <None Include="Resources\mail_16x16.png" />
+    <None Include="Resources\showcomments_16x16.png" />
+    <None Include="Resources\security_visibility.svg" />
+    <None Include="Resources\super_mario_bros_3_moneda.wav" />
+    <None Include="Resources\send_16x16.png" />
+    <None Include="Resources\left_16x16.png" />
+    <None Include="Resources\right_16x16.png" />
+    <None Include="Resources\accounting_16x16.png" />
+    <None Include="Resources\B buffuon.png" />
+    <None Include="Resources\sinImagen.jpg" />
+    <None Include="Resources\bosale_32x321.png" />
+    <None Include="Resources\task_20x20.png" />
+    <None Include="Resources\task_32x32.png" />
+    <None Include="Resources\ungrouprows_20x20.png" />
+    <None Include="Resources\ungrouprows_32x32.png" />
+    <None Include="Resources\grouprows_20x20.png" />
+    <None Include="Resources\grouprows_32x32.png" />
+    <None Include="Resources\ungrouprows_16x16.png" />
+    <None Include="Resources\apply16.png" />
+    <None Include="bosale_20x20.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="buffon.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Completed_32x32.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\bosale_32x32.png" />
+    <None Include="Resources\print_16x16.png" />
+    <None Include="Resources\masterfilter_20x20.png" />
+    <None Include="Resources\filter_20x20.png" />
+    <None Include="Resources\x-mark-4-36.png" />
+    <None Include="Resources\data-configuration1-24.png" />
+    <None Include="Resources\arrow-28-50.png" />
+    <None Include="Resources\Cancel_20x20.png" />
+    <None Include="Resources\Apply_20x20.png" />
+    <None Include="Resources\addfile_16x16.png" />
+    <None Include="Resources\undo_16x16.png" />
+    <None Include="Resources\close_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://www.banxico.org.mx/DgieWSWeb/DgieWS%3fWSDL">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\BANXICO\</RelPath>
+      <UpdateFromURL>http://www.banxico.org.mx/DgieWSWeb/DgieWS%3fWSDL</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Orus_BANXICO_DgieWS</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
